@@ -1,4 +1,4 @@
-# Bot Framedash
+# Ibex Dashboard
 This is an application insights based project that displays a bots analytics dashboard.
 
 # Preview
@@ -24,6 +24,12 @@ This is an application insights based project that displays a bots analytics das
 Since application insights API doesn't support ARM yet, we need to manually [create an API Key](https://dev.applicationinsights.io/documentation/Authorization/API-key-and-App-ID) for the application insights service.
 Once you created the api key, copy and paste it into the **Dashboard settings screen**.
 
+## Deploy With Docker
+
+1. `docker build -t **image name** .`
+2. `docker run -d -e PORT=80 **image name** `
+3. Docker image is also available at Docker Hub - `docker pull catalystcode/ibex-dashboard`
+
 ## Create new API Key and Application ID
 
 The following steps explain how to connect **Application Insights** bot with your bot and your dashboard:
@@ -39,7 +45,7 @@ The following steps explain how to connect **Application Insights** bot with you
 
 # Resources
 
-### Used Repos Technologies
+### Technologies In Use
 
 * http://recharts.org/
 * http://www.material-ui.com/
@@ -67,14 +73,12 @@ Thinking about integrating with:
 ```bash
 git clone https://github.com/CatalystCode/ibex-dashboard.git
 cd ibex-dashboard
-npm install -g create-react-app
-npm install -g yarn
-yarn install
+npm install
 ```
 
 ### Dev
 ```bash
-yarn run start:dev
+npm run start:dev
 ```
 
 ### Test Watcher
